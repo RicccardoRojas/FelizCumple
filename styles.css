@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -31,16 +31,21 @@ body {
 
 .container {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    width: 90%; /* Ancho máximo para móviles */
+    max-width: 600px; /* Ancho máximo para pantallas grandes */
+    margin: 20px; /* Margen para evitar que toque los bordes */
+    overflow-y: auto; /* Permitir scroll si el contenido es muy largo */
+    max-height: 90vh; /* Altura máxima para móviles */
 }
 
 h1 {
-    font-size: 3rem;
-    color: #ff6f61; /* Color coral */
+    font-size: 2rem; /* Tamaño de fuente más pequeño para móviles */
+    color: #ff6f61;
     margin-bottom: 20px;
 }
 
@@ -48,7 +53,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px; /* Espacio entre fotos reducido para móviles */
 }
 
 .photo {
@@ -58,10 +63,11 @@ h1 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     cursor: pointer;
+    width: calc(50% - 10px); /* Dos columnas en móviles */
 }
 
 .photo:hover {
-    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+    transform: scale(1.05);
 }
 
 .photo img {
@@ -104,9 +110,10 @@ h1 {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    max-width: 80%;
-    max-height: 80%;
-    overflow: auto;
+    width: 90%; /* Ancho máximo para móviles */
+    max-width: 800px; /* Ancho máximo más grande para escritorio */
+    max-height: 80vh; /* Altura máxima para móviles */
+    overflow-y: auto; /* Permitir scroll si el contenido es muy largo */
     transform: scale(0.9);
     transition: transform 0.3s ease-in-out;
 }
@@ -117,7 +124,7 @@ h1 {
 
 .modal-content img {
     max-width: 100%;
-    max-height: 300px;
+    max-height: 400px; /* Altura máxima de la imagen en escritorio */
     border-radius: 10px;
 }
 
