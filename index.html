@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/Icono.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>¡Feliz Cumpleaños!</h1>
+        <div class="photo-album">
+            <div class="photo" onclick="openModal('img/IMG_1377.jpg', '¡Que tengas un día increíble!')">
+                <img src="img/IMG_1377.jpg" alt="Foto 1">
+                <p>¡Que tengas un día increíble!</p>
+            </div>
+            <div class="photo" onclick="openModal('img/IMG_1802.JPG', '¡Brilla como siempre lo haces!')">
+                <img src="img/IMG_1802.JPG" alt="Foto 2">
+                <p>¡Brilla como siempre lo haces!</p>
+            </div>
+            <div class="photo" onclick="openModal('img/IMG_3153.JPG', '¡Disfruta al máximo!')">
+                <img src="img/IMG_3153.JPG" alt="Foto 3">
+                <p>¡Disfruta al máximo!</p>
+            </div>
+            <div class="photo" onclick="openModal('img/IMG_3795.JPG', '¡Eres increíble!')">
+                <img src="img/IMG_3795.JPG" alt="Foto 4">
+                <p>¡Eres increíble!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Imagen modal">
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <canvas id="confetti"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
